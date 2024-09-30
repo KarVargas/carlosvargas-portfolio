@@ -3,10 +3,11 @@ cv_en.html
 cv_es.html
 bootstrap-4.1.3/
 bootstrap-4.1.3-dist/
-img/
+img_temp/
 Ideas/
 v1/
 
 #not ignore
 !img/CV.png
 !img/hero-bg.png
+#not working
