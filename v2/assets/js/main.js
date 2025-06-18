@@ -269,3 +269,45 @@
   new PureCounter();
 
 })()
+
+// Select elements
+const showDataCheckbox = document.getElementById('switch-show-data');
+// const dataToShow = document.getElementById('data-to-show');
+// All IDs of data boxes to show/hide
+const dataBoxes = [
+  document.getElementById('data-to-show1'),
+  document.getElementById('data-to-show2'),
+  document.getElementById('data-to-show3'),
+  document.getElementById('data-to-show4'),
+  document.getElementById('data-to-show5'),
+  document.getElementById('data-to-show6'),
+];
+
+// // Toggle show/hide data based on switch for "Mostrar datos"
+// showDataCheckbox.addEventListener('change', () => {
+//   if (showDataCheckbox.checked) {
+//     dataToShow.classList.remove('hidden');
+//   } else {
+//     dataToShow.classList.add('hidden');
+//   }
+//   // Update aria-checked for accessibility
+//   showDataCheckbox.parentElement.setAttribute('aria-checked', showDataCheckbox.checked.toString());
+// });
+// // Initialize aria-checked attributes on page load
+// window.addEventListener('DOMContentLoaded', () => {
+//   showDataCheckbox.parentElement.setAttribute('aria-checked', showDataCheckbox.checked.toString());
+// });
+// Toggle show/hide data based on switch for "Mostrar datos"
+showDataCheckbox.addEventListener('change', () => {
+  if (showDataCheckbox.checked) {
+    dataBoxes.forEach(box => box.classList.remove('hidden'));
+  } else {
+    dataBoxes.forEach(box => box.classList.add('hidden'));
+  }
+  // Update aria-checked for accessibility
+  showDataCheckbox.parentElement.setAttribute('aria-checked', showDataCheckbox.checked.toString());
+});
+// Initialize aria-checked attributes on page load
+window.addEventListener('DOMContentLoaded', () => {
+  showDataCheckbox.parentElement.setAttribute('aria-checked', showDataCheckbox.checked.toString());
+});
